@@ -7,4 +7,4 @@ if (isset($_GET['page']) and in_array($_GET['page'], $availableRoutes)) {
     $route = $_GET['page'];
 }
 
-require './views/layout.phtml';
+require './views/layout.php';
