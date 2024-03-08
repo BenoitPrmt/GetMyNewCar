@@ -1,6 +1,7 @@
 <?php
 
-class UserManager extends Manager {
+class UserManager extends Manager
+{
 
     public function __construct(PDO $database_connection, string $table)
     {
@@ -9,7 +10,7 @@ class UserManager extends Manager {
 
     public function createOne(object $data): int
     {
-        if($data instanceof User) {
+        if ($data instanceof User) {
             $query = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
             $response = $this->bdd->prepare($query);
             $response->execute([
@@ -32,5 +33,14 @@ class UserManager extends Manager {
             'password' => $data->getPassword(),
             'id' => $data->getId(),
         ]);
+    }
+    public function getOneByEmail(string $email): array
+    {
+        $query = "SELECT * FROM users WHERE email = :email";
+        $response = $this->bdd->prepare($query);
+        $response->execute([
+            'email' => $email
+        ]);
+        return $response->fetch();
     }
 }

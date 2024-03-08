@@ -1,0 +1,33 @@
+<div class="flex flex-wrap justify-center gap-5">
+
+    <?php foreach ($cars as $car) { ?>
+        <div class="max-w-[320px] relative rounded-md overflow-hidden shadow-lg hover:shadow-xl duration-150 cursor-pointer">
+          <img class="w-full" src="<?= $car['image'] ?>" alt="Property Image">
+          <div class="px-6 py-4">
+            <div class="mb-2">
+              <h2 class="text-xl font-bold text-gray-900"><?= $car['model'] ?></h2>
+              <h2 class="text-lg text-gray-900"><?= $car['brand'] ?></h2>
+            </div>
+            <div class="flex justify-between">
+              <div class="flex items-center">
+                <i class="fa-solid fa-chart-simple"></i>
+                <p class="ml-2 text-sm font-medium text-gray-700"><?= $car['kilometers'] ?> km</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fa-regular fa-calendar"></i>
+                <p class="ml-2 text-sm font-medium text-gray-700"><?= $car['date'] ?></p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="mt-4">
+                <p class="text-3xl font-semibold text-red-600"><?= $car['price'] ?> €</p>
+              </div>
+              <button class="block absolute bottom-4 right-3 h-8 w-24 rounded-xl bg-red-600 text-lg font-bold text-white">
+                Détails
+              </button>
+            </div>
+          </div>
+        </div>
+    <?php } ?>
+
+</div>

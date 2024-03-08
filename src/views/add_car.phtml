@@ -1,1 +1,41 @@
-<?php
+<h1>Ajouter une voiture</h1>
+
+<form class="max-w-sm mx-auto" method="post">
+  <div class="mb-5">
+    <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marque de la voiture</label>
+    <input type="text" id="brand" name="brand" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Renault" required />
+  </div>
+
+    <div class="mb-5">
+    <label for="model" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modèle de la voiture</label>
+    <input type="text" id="model" name="model" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Twingo" required />
+  </div>
+
+    <div class="mb-5">
+    <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Prix de vente</label>
+    <input type="number" id="price" name="price" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="10 000" required />
+  </div>
+
+    <div class="mb-5">
+    <label for="kilometers" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kilométrage du véhicule</label>
+    <input type="number" id="kilometers" name="kilometers" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="50 000" required />
+  </div>
+
+    <div class="mb-5">
+    <label for="year" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Année de sortie</label>
+    <input type="number" id="year" name="year" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="2010" required />
+  </div>
+
+    <div class="mb-5">
+    <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image</label>
+    <input type="text" id="image" name="image" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Lien de l'image du véhicule" required />
+  </div>
+
+  <div class="flex items-start mb-5">
+    <div class="flex items-center h-5">
+      <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+    </div>
+    <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">J'accepte les <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">conditions d'utilisation et de mise en vente</a></label>
+  </div>
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Mettre en vente</button>
+</form>
