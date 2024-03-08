@@ -10,7 +10,8 @@ if (!empty($_POST)) {
     $userInfos = $userManager->getOneByEmail($_POST['email']);
     if ($userInfos['password'] === $_POST['password']) {
       $_SESSION['user'] = [
-        'username' => $userInfos['username']
+        'username' => $userInfos['username'],
+          'userId' => $userInfos['id']
       ];
       ob_clean();
       header('Location:index.php');
