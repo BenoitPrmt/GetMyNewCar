@@ -10,7 +10,8 @@ if (!empty($_POST)) {
 
     if(isset($_POST['remember'])) {
         $_SESSION['user'] = [
-            'username' => $_POST['username']
+            'username' => $_POST['username'],
+            'userId' => $userId
         ];
     }
 
