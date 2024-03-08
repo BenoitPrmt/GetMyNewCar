@@ -1,6 +1,11 @@
 <?php
-
+global $bdd;
 require './src/core.php';
+
+require './src/classes/managers/Manager.php';
+require './src/classes/managers/CarManager.php';
+require './src/classes/Car.php';
+$carManager = new CarManager($bdd, 'cars');
 
 $availableRoutes = ['home'];
 
