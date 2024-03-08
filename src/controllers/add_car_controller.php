@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_POST);
-
 if(!empty($_POST)) {
     $car = new Car([
         'brand' => $_POST['brand'],
