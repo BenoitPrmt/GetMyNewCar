@@ -20,14 +20,10 @@ let isClickedAmerica = false;
 let soundAmerica;
 
 america.addEventListener('click', () => {
-  if (!isClickedAmerica) {
+  {
     soundAmerica = new Howl({
       src: ['./public/assets/sounds/sniper.mp3'],
-      onend: function () {
-        isClickedAmerica = false;
-      }
     });
     soundAmerica.play();
-    isClickedAmerica = true;
   }
 });
