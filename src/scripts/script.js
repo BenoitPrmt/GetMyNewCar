@@ -1,16 +1,33 @@
 const icon = document.querySelector('.icon');
-let isClicked = false;
-let sound;
+let isClickedIcon = false;
+let soundIcon;
 
 icon.addEventListener('click', () => {
-  if (!isClicked) {
-    sound = new Howl({
+  if (!isClickedIcon) {
+    soundIcon = new Howl({
       src: ['./public/assets/sounds/car.mp3'],
       onend: function () {
-        isClicked = false;
+        isClickedIcon = false;
       }
     });
-    sound.play();
-    isClicked = true;
+    soundIcon.play();
+    isClickedIcon = true;
+  }
+});
+
+const america = document.querySelector('.america');
+let isClickedAmerica = false;
+let soundAmerica;
+
+america.addEventListener('click', () => {
+  if (!isClickedAmerica) {
+    soundAmerica = new Howl({
+      src: ['./public/assets/sounds/sniper.mp3'],
+      onend: function () {
+        isClickedAmerica = false;
+      }
+    });
+    soundAmerica.play();
+    isClickedAmerica = true;
   }
 });
