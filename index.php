@@ -13,7 +13,7 @@ require './src/classes/User.php';
 $carManager = new CarManager($bdd, 'cars');
 $userManager = new UserManager($bdd, 'users');
 
-$availableRoutes = ['home'];
+$availableRoutes = ['home', 'register'];
 
 $route = 'home';
 if (isset($_GET['page']) and in_array($_GET['page'], $availableRoutes)) {
