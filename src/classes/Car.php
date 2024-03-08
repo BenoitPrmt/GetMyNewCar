@@ -10,6 +10,7 @@ class Car
     private float $kilometers;
     private string $image;
     private int $year;
+    private int $userId;
     private bool $isSold;
 
     public function __construct(array $data)
@@ -95,6 +96,16 @@ class Car
     public function setYear(int $year): void
     {
         $this->year = $year;
+    }
+
+    public function getUserId(): int
+    {
+        return $this->userId;
+    }
+
+    public function setUserId(int $userId): void
+    {
+        $this->userId = $userId;
     }
 
     public function getIsSold(): bool
