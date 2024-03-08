@@ -1,6 +1,8 @@
 <?php
 
-$availableRoutes = ['home', ''];
+require './src/core.php';
+
+$availableRoutes = ['home'];
 
 $route = 'home';
 if (isset($_GET['page']) and in_array($_GET['page'], $availableRoutes)) {
